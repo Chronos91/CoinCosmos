@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import get_crypto_data
+from core.views import get_crypto_data, get_news_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/crypto/', get_crypto_data, name='get_crypto_data'),
+    path('api/news/', get_news_data, name='get_news_data'),
 ]
